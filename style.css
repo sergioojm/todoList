@@ -60,7 +60,6 @@ body
   display: flex;
   justify-content: space-evenly;
   column-gap: 10px;
-  align-items: baseline;
 }
 
 .chore-button
@@ -144,8 +143,6 @@ body
   color: #615659;
   font-size: 12px;
   margin-right: auto;
-  grid-column: 1 / 2;
-  grid-row: 1;
 }
 
 
