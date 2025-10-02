@@ -37,6 +37,14 @@ function createChore(chore = {}) {
   const div = document.createElement('div');
   div.className = 'chore';
 
+  const row1 = document.createElement('div');
+  const row2 = document.createElement('div');
+  const row3 = document.createElement('div');
+
+  row1.className = 'chore-row-1';
+  row2.className = 'chore-row-2';
+  row3.className = 'chore-row-3';
+
   const now = new Date();
 
   const timestampt = document.createElement('p');
@@ -86,7 +94,16 @@ function createChore(chore = {}) {
 
   [input, title].forEach(el => el.addEventListener('blur', saveChoresToLocalStorage));
 
-  div.append(timestampt, deleteButton, finishedButton, title, input);
+  row1.appendChild(timestampt);
+  row1.appendChild(finishedButton);
+  row1.appendChild(deleteButton);
+  row2.appendChild(title);
+  row3.appendChild(input);
+
+  div.appendChild(row1);
+  div.appendChild(row2);
+  div.appendChild(row3);
+
   document.getElementById('chores').appendChild(div);
 
   saveChoresToLocalStorage();
